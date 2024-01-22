@@ -4,7 +4,8 @@ const sequelize = require("../db");
 const Jugador = sequelize.define('Jugador', {
     id_usuario: {
         type: DataTypes.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     }, 
     nombre: {
         type: DataTypes.STRING

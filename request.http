@@ -7,10 +7,8 @@ POST http://localhost:3000/players/add HTTP/1.1
 Content-Type: application/json
 
 {
-    "id_usuario":3,
     "nombre":"Jal117",
-    "password":"123456",
-    "totalVictorias": 0
+    "password":"123456"
 }
 
 ###
@@ -20,6 +18,15 @@ Content-Type: application/json
 {
     "id_usuario":1,
     "totalVictorias":1
+}
+
+###
+GET http://localhost:3000/players/buscarUsuario HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"Jal117",
+    "password":"123456"
 }
 
 

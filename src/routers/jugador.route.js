@@ -13,14 +13,13 @@ router.get('/' , async (req , res)=>{
 
 
 router.post('/add' , async (req , res)=>{
-    const {id_usuario, nombre, password, totalVictorias} = req.body;
+    const {nombre, password} = req.body;
     try {
         await Jugador.sync();
         const player = await Jugador.create({
-            id_usuario: id_usuario,
             nombre: nombre,
             password: password,
-            totalVictorias: totalVictorias
+
         });
         res.json(player)
     } catch (error) {
@@ -41,5 +40,17 @@ router.put('/actualizarPuntuacion' , async (req , res)=>{
         res.status(500).json({ error: "Ha ha ocurrido un error"});
     }
 });
+
+router.get('/buscarUsuario' , async (req , res)=>{
+    const {nombre, password} = req.query;
+    try {
+        const player = await Jugador.findOne({
+            where:{nombre: nombre, password: password}})
+        res.json({player, message: "Usuario encontrado"})
+    } catch (error) {
+        console.log(error);
+        res.status(500);
+    }
+})
 
 module.exports  = router;
