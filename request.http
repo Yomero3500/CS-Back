@@ -2,12 +2,18 @@
 ###
 GET http://localhost:3000/players/ HTTP/1.1
 
+
+###
+GET http://localhost:3000/match/unirse/longpolling/5
+
+
+
 ###
 POST http://localhost:3000/players/add HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre":"Jal117",
+    "nombre":"Michi",
     "password":"123456"
 }
 
@@ -39,10 +45,28 @@ POST http://localhost:3000/match/add HTTP/1.1
 Content-Type: application/json
 
 {
-    "id_partida": 3,
     "palabra": "pala",
-    "estado": "perdida",
     "id_participante1": 1,
     "id_participante2": 2,
     "id_participante3": 3
 }
+
+### 
+PUT http://localhost:3000/match/letraIncorrecta HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_partida": 1
+}
+
+### 
+PUT http://localhost:3000/match/partida HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_partida": 2, 
+    "estado": "Finalizado"
+}
+
+###
+GET http://localhost:3000/match/unirse/id_partida=6 HTTP/1.1

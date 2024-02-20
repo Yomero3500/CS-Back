@@ -1,0 +1,6 @@
+projectKey=api_hexagonal
+serverUrl=http://localhost:9000
+serverVersion=10.3.0.82913
+dashboardUrl=http://localhost:9000/dashboard?id=api_hexagonal
+ceTaskId=AY0zlWLV5q5Oehxu70yK
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AY0zlWLV5q5Oehxu70yK

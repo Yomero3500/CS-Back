@@ -5,10 +5,17 @@ const Jugador = require('./Jugador.model');
 const Partida = sequelize.define("Partida", {
     id_partida: {
         type: DataTypes.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     palabra: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
+    },
+    letras_encontradas:{
+        type: DataTypes.STRING
+    },
+    intentos_restantes:{
+        type: DataTypes.INTEGER
     },
     estado: {
         type: DataTypes.STRING

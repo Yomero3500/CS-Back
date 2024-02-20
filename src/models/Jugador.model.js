@@ -12,9 +12,6 @@ const Jugador = sequelize.define('Jugador', {
     },
     password: {
         type: DataTypes.STRING
-    },
-    totalVictorias: {
-        type: DataTypes.INTEGER
     }
 });
 

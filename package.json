@@ -4,18 +4,24 @@
   "description": "ORM para SQL",
   "main": "index.js",
   "scripts": {
+    "sonar": "sonar-scanner",
     "start": "node src/index.js ",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/app/app.js"
   },
   "author": "@michel",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mysql": "^2.18.1",
     "mysql2": "^3.7.1",
     "nodemon": "^3.0.3",
     "sequelize": "^6.35.2",
+    "socket.io": "^4.7.4",
     "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "sonarqube-scanner": "^3.3.0"
   }
 }

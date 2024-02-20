@@ -21,7 +21,7 @@ router.post('/add' , async (req , res)=>{
             password: password,
 
         });
-        res.json(player)
+        res.json({player, message: "Usuario creado"})
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: "Ha ha ocurrido un error"});
